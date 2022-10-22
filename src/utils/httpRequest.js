@@ -1,9 +1,10 @@
 import axios from 'axios';
 
 const httpRequest = axios.create({
-    baseURL: `${process.env.REACT_APP_BASE_URL_API}${process.env.REACT_APP_PATH_API}`
+    baseURL: `${process.env.REACT_APP_BASE_URL_API || 'https://serverzingmp3.herokuapp.com'}${
+        process.env.REACT_APP_PATH_API || '/api'
+    }`,
 });
-
 
 export const get = async (path, options = {}) => {
     const response = await httpRequest.get(path, options);
