@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--default-bg-color-body);
+}
+
+.content {
+    flex: 1;
+    color: var(--white);
+    margin-left: var(--default-width-nav);
+    overflow: hidden;
+    padding: 100px 60px 108px;
+    transition: all .3s ease-in-out;
+    width: calc(100% - var(--default-width-nav));
+    z-index: 1;
+    min-height: 100vh;
+}
+
+@media only screen and (min-width: 737px) and (max-width: 1024px) {
+    .content {
+        margin-left: var(--default-width-nav-m-t);
+        width: calc(100% - var(--default-width-nav-m-t));
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 100px 20px 120px;
+    }
+}

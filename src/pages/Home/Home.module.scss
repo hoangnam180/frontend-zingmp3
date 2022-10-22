@@ -1,0 +1,54 @@
+.banner {
+    margin-bottom: 50px;
+    position: relative;
+
+    &:hover .control button {
+        display: block;
+    }
+
+    .control {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: transparent;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5px;
+
+        button {
+            background-color: transparent;
+            cursor: pointer;
+            z-index: 1;
+            display: none;
+
+            span {
+                font-size: 2.4rem;
+                background: #c2c1c359;
+                position: relative;
+                width: 55px;
+                height: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.images {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+
+    img {
+        overflow: hidden;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 10px;
+    }
+}

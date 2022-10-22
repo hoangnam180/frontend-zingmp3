@@ -1,0 +1,51 @@
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+.genre-select {
+    margin-bottom: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .button {
+        padding: 4px 24px;
+        border: 1px solid hsla(0, 0%, 100%, 0.1);
+        border-radius: 100px;
+        font-weight: 400;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-right: 15px;
+        text-align: center;
+        cursor: pointer;
+        background: transparent;
+        position: relative;
+        color: #fff;
+
+        &.active {
+            border-color: #9b4de0;
+            background-color: #9b4de0;
+            color: var(--white);
+        }
+
+        &:hover {
+            opacity: .9;
+        }
+    }
+
+    .discovery-btn {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        color: hsla(0, 0%, 100%, 0.5);
+
+        &:hover {
+            color: #9b4de0;
+            cursor: pointer;
+        }
+    }
+}

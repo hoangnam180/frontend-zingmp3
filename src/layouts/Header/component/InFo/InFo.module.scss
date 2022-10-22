@@ -1,0 +1,53 @@
+// right
+.header-right {
+    align-items: flex-end;
+    display: flex;
+    flex: 1 1;
+    justify-content: flex-end;
+
+    .circle {
+        align-items: center;
+        background-color: var(--bg-color-more);
+        border: none;
+        border-radius: 50%;
+        color: #c2c1c3;
+        cursor: pointer;
+        display: flex;
+        height: 38px;
+        justify-content: center;
+        position: relative;
+        text-decoration: none;
+        width: 38px;
+
+        span {
+            font-size: 18px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        .check-btn-img {
+            border-radius: 50%;
+            cursor: pointer;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 737px) and (max-width: 1024px) {
+    .circle.none {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 736px) {
+    .header-right {
+        flex: initial;
+        display: none;
+    }
+}

@@ -1,0 +1,10 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: min((100vh - 96px) - 60px, 734px);
+    min-height: 100px;
+    background-color: var(--bg-color-search);
+    border-radius: 25px;
+    color: var(--color-text-search);
+}

@@ -1,0 +1,39 @@
+.logo {
+    cursor: pointer;
+    height: 70px;
+    padding: 0 25px;
+    position: relative;
+    width: 100%;
+
+    img {
+        margin-top: 14px;
+        width: 120px;
+    }
+
+    .logo2 {
+        display: none;
+    }
+}
+
+// Resonsive
+@media only screen and (min-width: 737px) and (max-width: 1024px) {
+    .logo {
+        padding: 0;
+
+        img {
+            margin-left: 20px;
+            display: none;
+            width: 100%;
+        }
+
+        .logo2 {
+            display: block;
+        }
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .logo {
+        display: none;
+    }
+}

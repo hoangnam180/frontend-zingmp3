@@ -1,0 +1,193 @@
+.sidebar {
+    width: var(--default-width-nav);
+    background-color: var(--default-bg-color-nav);
+    bottom: var(--default-height-footer);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - var(--default-height-footer));
+    left: 0;
+    overflow-y: overlay;
+    position: fixed;
+    top: 0;
+    transition: bottom .2s ease-in-out, width .2s ease-in-out;
+    width: var(--default-width-nav);
+    z-index: 2;
+    color: #fff;
+
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.nav-divide {
+    background-color: var(--bg-color-more);
+    height: 1px;
+    margin: 14px 25px 0;
+}
+
+.nav-scroll {
+    flex: 1 1;
+    height: 50vh;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    padding-top: 14px;
+    overflow-y: scroll;
+}
+
+.nav-adv {
+    align-items: center;
+    background-image: linear-gradient(115deg, #5c4ce7, #c26bd8);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 15px 8px;
+    text-align: center;
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+
+    .nav__adv-title {
+        color: var(--white);
+
+    }
+
+    button {
+        background-color: #ffdb00;
+        border-radius: 10px;
+        color: #32323d;
+        margin-top: 12px;
+        padding: 6px 30px;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 500;
+        border: 2.5px solid currentColor;
+    }
+}
+
+.nav-new-playlist {
+    display: flex;
+    align-items: center;
+    background-color: var(--default-bg-color-nav);
+    border-top: 1px solid var(--bg-color-more);
+    bottom: 0;
+    color: #dfdfdf;
+    cursor: pointer;
+    height: 60px;
+    position: absolute;
+    width: 100%;
+
+    i {
+        font-size: 18px;
+        margin-left: 25px;
+    }
+
+    .nav-title {
+        flex: 1 1;
+        font-size: 15px;
+        font-weight: 800;
+        margin-left: 10px;
+    }
+}
+
+// Resonsive
+@media only screen and (min-width: 737px) and (max-width: 1024px) {
+    .sidebar {
+        width: var(--default-width-nav-m-t);
+        z-index: 3;
+        overflow: hidden;
+
+        .nav-adv {
+            display: none;
+        }
+
+        .nav-scroll {
+            overflow: hidden;
+        }
+    }
+
+    .nav-item-link {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav-new-playlist {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .sidebar {
+        background-color: var(--default-bg-color-footer);
+        display: flex;
+        flex-direction: row;
+        bottom: 0;
+        left: 0;
+        overflow-y: overlay;
+        position: fixed;
+        transition: bottom 0.2s ease-in-out, width 0.2s ease-in-out;
+        z-index: 2;
+        color: #fff;
+        width: 100%;
+        top: calc(100% - 58px);
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .nav-tab {
+        display: none;
+    }
+
+    .nav-title {
+        font-size: .9rem;
+    }
+
+    .nav-icon {}
+
+    .nav-mobile {
+        display: flex;
+        width: 100%;
+
+        ul {
+            list-style: none;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+
+            li a div {
+                flex-direction: column;
+            }
+
+            li {
+                position: relative;
+                padding: 0;
+
+                a {
+                    opacity: .6;
+
+                    &.active {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            li:not(:last-child):after {
+                content: "";
+                height: 40px;
+                width: 1px;
+                position: absolute;
+                right: -40%;
+                transform: translateX(-50%);
+                background-color: rgb(51, 50, 50);
+                top: 10px;
+            }
+        }
+    }
+}

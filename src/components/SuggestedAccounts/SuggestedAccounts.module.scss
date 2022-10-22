@@ -1,0 +1,202 @@
+.suggestSongs {
+    background-color: var(--bg-color-search);
+    border-radius: 25px;
+    color: var(--color-text-search);
+    left: 0;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    display: none;
+    overflow-y: scroll;
+    margin-top: 1px;
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        // background-color: var(--bg-color-search);
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    &.active {
+        display: block;
+    }
+
+    .suggest-song-title:first-child {
+        padding-top: 50px;
+    }
+
+    .suggest-song-title {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        padding: 0 20px;
+    }
+
+    .suggest-song-list {
+        list-style: none;
+        padding: 0 15px;
+    }
+
+    .suggest-song-item {
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 8px 10px;
+
+        &:hover {
+            background-color: #8d8d8d59;
+        }
+
+        .icon {
+            color: var(--color-text-search);
+            font-size: 16px;
+            margin-right: 12px;
+        }
+
+        .suggest-song-prev {
+            font-size: 14px;
+        }
+    }
+}
+
+.suggestion {
+    border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+    margin-top: 10px;
+    padding-top: 10px;
+
+    .suggest-song-title {
+        padding-top: 0 !important;
+        padding-left: 0px;
+        padding: 0 15px;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+        position: relative;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        padding: 10px 15px;
+
+        &:hover {
+            background-color: rgba(141, 141, 141, 0.3490196078);
+        }
+    }
+
+    .media {
+        padding: 0;
+        flex: 1 1;
+        align-items: center;
+        display: flex;
+        text-align: left;
+        padding: 10px;
+        border-radius: 5px;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    .media-left,
+    .media-right {
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+        overflow: hidden;
+        height: 52px;
+        width: 52px;
+        border-radius: 4px;
+
+        img {
+            display: inline-block;
+            vertical-align: top;
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+
+    .media {
+        flex-basis: auto;
+        flex-grow: 1;
+        flex-shrink: 1;
+        text-align: left;
+        width: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .title {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 100%;
+            line-height: normal;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .sub-title {
+            display: block;
+            font-size: 12px;
+            margin-top: 3px;
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 100%;
+            line-height: normal;
+            margin-top: 2px;
+            font-weight: 500;
+
+            span {
+                color: hsla(0, 0%, 100%, 0.5);
+
+                + span {
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 737px) and (max-width: 1024px) {
+    .suggestSongs {
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .suggestSongs {
+        height: 40vh;
+    }
+
+    .suggest-song-item {
+        span {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    .suggest-song-title {
+        font-size: 1.2rem !important;
+    }
+
+    .media .title {
+        font-size: 1.1rem !important;
+    }
+
+    .sub-title {
+        span {
+            font-size: 1.1rem !important;
+        }
+    }
+
+    .media-left {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}

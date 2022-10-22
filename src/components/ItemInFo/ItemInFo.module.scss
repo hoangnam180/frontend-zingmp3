@@ -1,0 +1,90 @@
+.info {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 10px 15px;
+
+    &:hover {
+        background-color: rgba(141, 141, 141, 0.3490196078);
+    }
+    &.active {
+        background-color: rgba(141, 141, 141, 0.3490196078);
+    }
+}
+
+.media {
+    padding: 0;
+    flex: 1 1;
+    align-items: center;
+    display: flex;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.media-left,
+.media-right {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 52px;
+    width: 52px;
+    border-radius: 4px;
+
+    img {
+        display: inline-block;
+        vertical-align: top;
+        object-fit: contain;
+        width: 100%;
+    }
+}
+
+.media {
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: left;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .title {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+        line-height: normal;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .sub-title {
+        display: block;
+        font-size: 12px;
+        margin-top: 3px;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 100%;
+        line-height: normal;
+        margin-top: 2px;
+        font-weight: 500;
+        text-align: left;
+
+        span {
+            color: hsla(0, 0%, 100%, 0.5);
+            display: block;
+        }
+    }
+}
